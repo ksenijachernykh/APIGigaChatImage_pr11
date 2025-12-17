@@ -13,8 +13,9 @@ namespace APIGigaChatImage
     {
         static string ClientId = "";
         static string AuthorizationKey = "";
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            string Token = await GetToken(ClientId, AuthorizationKey);
         }
 
         public static async Task<string> GetToken(string rqUID, string bearer)
