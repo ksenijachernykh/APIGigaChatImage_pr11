@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Request\Request.cs" />
+    <Compile Include="Models\Response\ResponseMessage.cs" />
     <Compile Include="Models\Response\ResponseToken.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
