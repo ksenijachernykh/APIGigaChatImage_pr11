@@ -11,7 +11,7 @@ namespace APIGigaChatImage.Classes
     {
         private const int SPI_SETDESKWALLPAPER = 0x0014;
         private const int SPIF_UPDATEINIFILE = 0x01;
-        private const int SPIF_SENDWININICHANGET = 0x02;
+        private const int SPIF_SENDWININICHANGE = 0x02;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int SystemParametersInfo(
@@ -28,7 +28,7 @@ namespace APIGigaChatImage.Classes
                     SPI_SETDESKWALLPAPER,
                     0,
                     imagePath,
-                    SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGET
+                    SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE
                     );
                 Console.WriteLine($"Обои установлены: {imagePath}");
             }

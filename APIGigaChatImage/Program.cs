@@ -1,4 +1,8 @@
-﻿using System;
+﻿using APIGigaChatImage.Classes;
+using APIGigaChatImage.Models.Request;
+using APIGigaChatImage.Models.Response;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,9 +10,6 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using APIGigaChatImage.Models.Request;
-using APIGigaChatImage.Models.Response;
-using Newtonsoft.Json;
 
 namespace APIGigaChatImage
 {
@@ -84,13 +85,23 @@ namespace APIGigaChatImage
                             string imagePath = SaveImage(imageData, userMessage);
                             Console.WriteLine($"Изображение сохранено: {imagePath}");
 
+                            Console.WriteLine("\nУстановка обоев рабочего стола...");
                             try
                             {
-                                Console.WriteLine("Изображение готово для использования в качестве обоев!");
+                                WallpaperSetter.SetWallpaper(imagePath);
+                                Console.WriteLine($"Обои успешно установлены!");
+
+                                Console.WriteLine($"Файл: {Path.GetFileName(imagePath)}");
+                                Console.WriteLine($"Размер: {imageData.Length / 1024} КБ");
                             }
                             catch (Exception ex)
                             {
-                                Console.WriteLine($"Не удалось установить обои: {ex.Message}");
+                                Console.WriteLine($"Ошибка при установке обоев: {ex.Message}");
+
+                                Console.WriteLine($"\nВы можете установить обои вручную:");
+                                Console.WriteLine($"1.Откройте папку: {Path.GetDirectoryName(imagePath)}");
+                                Console.WriteLine($"2.Правой кнопкой мыши по файлу '{Path.GetFileName(imagePath)}'");
+                                Console.WriteLine($"3.Выберите 'Сделать фоновым изображением рабочего стола'");
                             }
                         }
                         else
