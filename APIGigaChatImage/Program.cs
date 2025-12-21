@@ -16,7 +16,7 @@ namespace APIGigaChatImage
     internal class Program
     {
         static string ClientId = "019b2ccb-5c6b-7642-8aa5-70cc2538d43b";
-        static string AuthorizationKey = "MDE5YjJjY2ItNWM2Yi03NjQyLThhYTUtNzBjYzI1MzhkNDNiOmMzYjFiMzYzLWM3YzItNDhlYi04MjMzLTZhMzhiMDczZDI0MA==";
+        static string AuthorizationKey = "MDE5YjJjY2ItNWM2Yi03NjQyLThhYTUtNzBjYzI1MzhkNDNiOjVhMTUwMjVmLTg4ZWMtNDNiZC05NjQxLWIxNzBiNmQ3NDM2Ng==";
 
         static List<Message> DialogHistory = new List<Message>();
 
