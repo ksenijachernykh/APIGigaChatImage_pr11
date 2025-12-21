@@ -19,7 +19,7 @@ namespace GigaChatImageGeneratorWPF
     public partial class MainWindow : Window
     {
         private const string ClientId = "019b2ccb-5c6b-7642-8aa5-70cc2538d43b";
-        private const string AuthorizationKey = "MDE5YjJjY2ItNWM2Yi03NjQyLThhYTUtNzBjYzI1MzhkNDNiOjVhMTUwMjVmLTg4ZWMtNDNiZC05NjQxLWIxNzBiNmQ3NDM2Ng==";
+        private const string AuthorizationKey = "MDE5YjJjY2ItNWM2Yi03NjQyLThhYTUtNzBjYzI1MzhkNDNiOmRmNDczNzJjLWUzOWMtNDEzZi04OTdlLWU1NmZjYTkyMDJlNw==";
 
         private List<Message> DialogHistory = new List<Message>();
         private string currentToken;
